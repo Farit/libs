@@ -48,6 +48,9 @@ set -o vi
 alias rm='rm -vi'
 alias ls='ls -GFh'
 alias ll='ls -l'
+# .[!.]* - includes hidden files and directories
+alias disk_usage='du -cshL .[!.]*'
+alias disk_space='df -h'
 
 
 #############################
