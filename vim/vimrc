@@ -4,7 +4,17 @@ set fileencodings=utf-8
 set t_Co=256
 set ruler
 set nocompatible
-"set clipboard=unnamed " Mac OS X clipboard sharing
+
+" yank to clipboard
+if has("clipboard")
+  "Mac OS X clipboard sharing
+  set clipboard=unnamed " copy to the system clipboard
+
+  if has("unnamedplus") " X11 support
+    set clipboard+=unnamedplus
+  endif
+endif
+
 
 " Commands
 " % - A symbolic identifier to specify a range. % defines a range from the
