@@ -1,0 +1,11 @@
+[core]
+    editor = vim
+	excludesfile = ~/.gitignore
+
+[color]
+    ui = true
+
+[log]
+    date = relative
+[alias]
+	st = status --ignored=traditional -uall --column --show-stash
