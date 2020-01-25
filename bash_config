@@ -46,7 +46,7 @@ set -o vi
 ##### ALIASES #####
 ###################
 alias rm='rm -vi'
-alias ls='ls -GFh'
+alias ls='ls -GFh --color=alway'
 alias ll='ls -l'
 # .[!.]* - includes hidden files and directories
 alias disk_usage='du -cshL .[!.]*'
@@ -70,3 +70,20 @@ export LESS_TERMCAP_us=$(printf '\e[04;36m') # enter underline mode - cyan
 ##################
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
+
+###################
+##### HISTORY #####
+###################
+
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+
