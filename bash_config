@@ -49,6 +49,7 @@ alias rm='rm -vi'
 alias ls='ls -GFh --color=alway'
 alias ll='ls -l'
 alias cp='cp -v'
+alias mv='mv -v'
 # .[!.]* - includes hidden files and directories
 alias disk_usage='du -cshL .[!.]*'
 alias disk_space='df -h'
